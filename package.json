@@ -1,0 +1,24 @@
+{
+  "name": "bexs-checkout",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.6",
+    "@reduxjs/toolkit": "^1.9.2",
+    "axios": "^1.3.0",
+    "classnames": "^2.3.2",
+    "express": "^4.18.2",
+    "next": "13.1.6",
+    "next-redux-wrapper": "^8.1.0",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5"
+  }
+}
