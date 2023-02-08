@@ -1,0 +1,12 @@
+.footer {
+  align-items: center;
+  background: #3c3c3c;
+  display: flex;
+  justify-content: center;
+  padding: 26px 20px;
+}
+
+.disclaimer {
+  color: #fff;
+  text-align: center;
+}

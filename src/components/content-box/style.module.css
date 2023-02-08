@@ -1,0 +1,19 @@
+.contentBox {
+  background: #fff;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  max-width: 1107px;
+  min-width: 320px;
+}
+
+.contentArea {
+  flex: 1;
+  padding: 48px 40px;
+}
+
+@media screen and (min-width: 998px) {
+  .contentBox {
+    flex-flow: row;
+  }
+}
