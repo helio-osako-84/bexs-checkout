@@ -1,0 +1,25 @@
+.backButton {
+  color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  padding-left: 18px;
+  position: relative;
+  text-decoration: none;
+}
+
+.backButton:hover {
+  text-decoration: underline;
+}
+
+.backButton::before {
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  content: "";
+  display: block;
+  height: 8px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  transform: rotate(45deg);
+  width: 8px;
+}

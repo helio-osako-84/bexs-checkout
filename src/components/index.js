@@ -1,3 +1,4 @@
+export { default as BackButton } from './back-button';
 export { default as ContentBox } from './content-box';
 export { default as CreditCardFillout } from './credit-card-fillout';
 export { default as Footer } from './footer';

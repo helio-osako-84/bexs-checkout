@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import {
+  BackButton,
   ContentBox,
   CreditCardFillout,
   Layout
@@ -14,7 +15,7 @@ export default function Home() {
     <Layout>
       <ContentBox>
         <CreditCardFillout>
-          <a href="#">Alterar forma de pagamento</a>
+          <BackButton link="#">Alterar forma de pagamento</BackButton> 
           <CreditCardFillout.Card />
         </CreditCardFillout>
         <ContentBox.Content>
