@@ -8,11 +8,12 @@ const mastercardPattern = /^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{
 const isEmptyString = value => value === '' ? undefined : value;
 
 const getCardBrand = cardNumber => {
+  const onlyNumbers = cardNumber.replace(/\D/g, '')
   let cardBrand = '';
 
-  if (visaPattern.test(cardNumber)) {
+  if (visaPattern.test(onlyNumbers)) {
     cardBrand = 'visa';
-  } else if (mastercardPattern.test(cardNumber)) {
+  } else if (mastercardPattern.test(onlyNumbers)) {
     cardBrand = 'mastercard';
   }
 
