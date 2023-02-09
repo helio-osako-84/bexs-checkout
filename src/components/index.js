@@ -7,3 +7,4 @@ export { default as Header } from './header';
 export { default as InputText} from './input-text';
 export { default as Layout } from './layout';
 export { default as Select} from './select';
+export { default as SubmitButton } from './submit-button';
