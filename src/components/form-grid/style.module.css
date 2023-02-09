@@ -1,0 +1,31 @@
+.FormGrid {
+  display: block;
+}
+
+.row {
+  display: flex;
+  margin-top: 9px;
+}
+
+.row:first-child {
+  margin-top: 0;
+}
+
+.row > * {
+  flex: 1;
+  margin-left: 10px; 
+}
+
+.row > *:first-child {
+  margin-left: 0; 
+}
+
+@media screen and (min-width: 998px) {
+  .row {
+    margin-top: 22px;
+  }
+
+  .row > * {
+    margin-left: 30px; 
+  }
+}
