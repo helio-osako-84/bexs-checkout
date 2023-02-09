@@ -1,27 +1,27 @@
-import { useEffect } from 'react';
 import {
   BackButton,
   ContentBox,
-  CreditCardFillout,
+  CardFillout,
   Layout
 } from '../components';
 
-export default function Home() {
-  useEffect(() => {
-    // !
-  }, []);
+const Home = () => (
+  <Layout>
+    <ContentBox>
+      <CardFillout>
+        <BackButton link="#">Alterar forma de pagamento</BackButton> 
+        <CardFillout.Card
+          cardBrand=""
+          cardNumber=""
+          cardHolder=""
+          expirationDate=""
+        />
+      </CardFillout>
+      <ContentBox.Content>
+        Conteúdo!
+      </ContentBox.Content>
+    </ContentBox>
+  </Layout>
+);
 
-  return (
-    <Layout>
-      <ContentBox>
-        <CreditCardFillout>
-          <BackButton link="#">Alterar forma de pagamento</BackButton> 
-          <CreditCardFillout.Card />
-        </CreditCardFillout>
-        <ContentBox.Content>
-          Conteúdo!
-        </ContentBox.Content>
-      </ContentBox>
-    </Layout>
-  );
-}
+export default Home;
