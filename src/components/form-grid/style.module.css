@@ -2,7 +2,8 @@
   display: block;
 }
 
-.row {
+.row,
+.actions {
   display: flex;
   margin-top: 9px;
 }
@@ -13,19 +14,33 @@
 
 .row > * {
   flex: 1;
+}
+
+.row > *,
+.actions > * {
   margin-left: 10px; 
 }
 
-.row > *:first-child {
+.row > *:first-child,
+.actions > *:first-child {
   margin-left: 0; 
 }
 
+.actions {
+  justify-content: center;
+}
+
 @media screen and (min-width: 998px) {
-  .row {
+  .row,
+  .actions {
     margin-top: 22px;
   }
 
   .row > * {
     margin-left: 30px; 
+  }
+
+  .actions {
+    justify-content: flex-end;
   }
 }

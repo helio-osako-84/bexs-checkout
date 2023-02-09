@@ -21,4 +21,14 @@ FormGrid.Row.propTypes = {
   children: PropTypes.node.isRequired
 }
 
+FormGrid.Actions = ({ children }) => (
+  <div className={style.actions}>
+    {children}
+  </div>
+);
+
+FormGrid.Actions.propTypes = {
+  children: PropTypes.node.isRequired
+}
+
 export default FormGrid;
