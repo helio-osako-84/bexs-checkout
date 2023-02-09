@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import ClassNames from 'classnames';
 import style from './style.module.css';
 
 const Select = ({
@@ -9,26 +10,32 @@ const Select = ({
   isInError,
   ...props
 }) => (
-  <div className={isInError ? style.isInError : ''}>
-    <label
-      htmlFor={id}
-      className={style.label}
-    >
-      {label}
-    </label>
+  <div className={
+    ClassNames(
+      style.wrapper,
+      isInError ? style.isInError : ''
+    )
+  }>
     <select
       name={id}
       className={style.select}
       placeholder={label}
+      required
       {...props}
     >
-      <option value=""> </option>
+      <option value="" disabled selected>{label}</option>
       {
         options.map((optionItem, key) => (
           <option key={key} value={optionItem}>{optionItem}</option>
         ))
       }
     </select>
+    <label
+      htmlFor={id}
+      className={style.label}
+    >
+      {label}
+    </label>
     <span className={style.errorMessage}>
       {errorMessage}
     </span>

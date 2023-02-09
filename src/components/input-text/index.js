@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import ClassNames from 'classnames';
 import style from './style.module.css';
 
 const InputText = ({
@@ -8,13 +9,12 @@ const InputText = ({
   isInError,
   ...props
 }) => (
-  <div className={isInError ? style.isInError : ''}>
-    <label
-      htmlFor={id}
-      className={style.label}
-    >
-      {label}
-    </label>
+  <div className={
+    ClassNames(
+      style.wrapper,
+      isInError ? style.isInError : ''
+    )
+  }>
     <input 
       name={id}
       type="text"
@@ -22,6 +22,12 @@ const InputText = ({
       placeholder={label}
       {...props}
     />
+    <label
+      htmlFor={id}
+      className={style.label}
+    >
+      {label}
+    </label>
     <span className={style.errorMessage}>
       {errorMessage}
     </span>
