@@ -21,9 +21,10 @@ const Select = ({
       className={style.select}
       placeholder={label}
       required
+      defaultValue=""
       {...props}
     >
-      <option value="" disabled selected>{label}</option>
+      <option value="">{label}</option>
       {
         options.map((optionItem, key) => (
           <option key={key} value={optionItem}>{optionItem}</option>
